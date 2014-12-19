@@ -1,7 +1,7 @@
 
 ;; ----- smex-history -----
 (
- paredit-mode
+ package-list-packages
  eval-buffer
  cd
  5x5
@@ -14,4 +14,5 @@
 (
  (eval-buffer . 2)
  (paredit-mode . 1)
+ (package-list-packages . 1)
 )

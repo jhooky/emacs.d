@@ -10,17 +10,19 @@
 ;;; Bootstrap config
 
 (require 'init-elpa)  ;; Machinery for installing required packages
+(require 'init-utils) 
 
 ;;; Load configs for specific features and modes
 
 (require-package 'diminish)
 (require-package 'scratch)
 
+(require 'init-defaults)
 (require 'init-ido)
 (require 'init-smex)
 (require 'init-uniquify)
 (require 'init-paredit)
-(require 'init-defaults)
+(require 'init-company)
 (require 'init-appearance)
 
 ;;; to move
@@ -28,8 +30,7 @@
 (setq user-full-name "John Hooks"
       user-mail-address "john@hookscrane.com")
 
-(when window-system
-  (setq scroll-conservatively 1))
+
 
 (load custom-file t)
 
