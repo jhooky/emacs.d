@@ -40,32 +40,8 @@
 ;; Load the Foundation
 (require 'foundation)
 
-;; Configure utilities  for loading packages
-;; (require 'init-elpa)  ;; Machinery for installing required packages
-;; (require 'init-utils) 
 
-;; ;; ;; Load configs for specific features and modes
-
-;; (require-package 'diminish)
-;; (require-package 'scratch)
-
-;; ;; ;; Configure basic setting and minor modes
-;; (require 'init-defaults)
-;; (require 'init-ido)
-;; (require 'init-smex)
-;; (require 'init-uniquify)
-;; (require 'init-paredit)
-;; (require 'init-yasnippet)
-;; ;; (require 'init-company)
-;; (require 'init-appearance)
-;; (require 'init-no-scroll)
-
-
-;; ;; ;; Configure major modes
-;; (require 'init-web)
-
-;; ;;; to move
-
+;; to move
 ;; (load custom-file t)
 
 (provide 'init)

@@ -17,10 +17,12 @@
 (setq package-enable-at-startup nil) ;; Disable automatic package load
 (package-initialize)
 
+;;; Load packages that do not require configuration
 (require-package 'diminish)
+(require-package 'scratch)
 (require-package 'dash)
 
-;;; Load all minor mode modules
+;;; Load minor mode modules
 (let ((modules '(init-defaults
 		 init-ido
                  init-smex
@@ -32,7 +34,7 @@
   (dolist (module modules)
     (require module)))
 
-;;; Load all major mode modules
+;;; Load major mode modules
 (require 'init-web)
 
 (provide 'foundation)
