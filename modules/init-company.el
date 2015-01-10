@@ -6,7 +6,7 @@
 
 ;;; Code:
 
-(require-package 'company)
+(tool-belt/require-package 'company)
 
 (add-hook 'after-init-hook 'global-company-mode)
 

@@ -6,7 +6,7 @@
 
 ;;; Code:
 
-(require-package 'smex)
+(tool-belt/require-package 'smex)
 
 (setq smex-save-file (concat user-emacs-directory ".smex-items"))
 (smex-initialize)

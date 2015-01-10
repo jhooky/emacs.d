@@ -10,16 +10,13 @@
 
 (defvar *core-dir* (expand-file-name "core" user-emacs-directory)
   "This is the core directory of foundation.")
-(message *core-dir*)
 (defvar *modules-dir* (expand-file-name "modules" user-emacs-directory)
   "This is the module directory of foundation.")
-(message *modules-dir*)
 (defvar *plugins-dir* (expand-file-name "plugins" user-emacs-directory)
   "This is the plugins directory for packages outside of foundation.")
-(message *plugins-dir*)
 (defvar *savefile-dir* (expand-file-name "savefile" user-emacs-directory)
   "This directory contains save and history files.")
-(message *savefile-dir*)
+
 
 ;; Create some key directories if they do not exist.
 (unless (file-exists-p *savefile-dir*)
@@ -35,14 +32,12 @@
 (require 'tool-belt)
 
 ;; Add all subdirectories of *plugins-dir*
-(add-subfolders-to-load-path *plugins-dir*)
+(tool-belt/add-subfolders-to-load-path *plugins-dir*)
 
 ;; Load the Foundation
 (require 'foundation)
 
-
-;; to move
-;; (load custom-file t)
+(load custom-file t)
 
 (provide 'init)
 

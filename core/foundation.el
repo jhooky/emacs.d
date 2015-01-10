@@ -17,17 +17,22 @@
 (setq package-enable-at-startup nil) ;; Disable automatic package load
 (package-initialize)
 
+;;; Load foundation core defaults
+(require 'defaults)
+(require 'quick-keys)
+
 ;;; Load packages that do not require configuration
-(require-package 'diminish)
-(require-package 'scratch)
-(require-package 'dash)
+(tool-belt/require-package 'cl-lib)
+(tool-belt/require-package 'guru-mode)
+(tool-belt/require-package 'diminish)
+(tool-belt/require-package 'dash)
 
 ;;; Load minor mode modules
-(let ((modules '(init-defaults
-		 init-ido
+(let ((modules '(init-ido
                  init-smex
                  init-uniquify
                  init-paredit
+                 init-yas
                  init-company
                  init-appearance
                  init-no-scroll)))
@@ -35,7 +40,10 @@
     (require module)))
 
 ;;; Load major mode modules
-(require 'init-web)
+(let ((modules '(init-web
+                 init-js)))
+  (dolist (module modules)
+    (require module)))
 
 (provide 'foundation)
 ;;; foundation.el ends here

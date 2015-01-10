@@ -7,7 +7,7 @@
 
 ;;; Code:
 
-(require-package 'zenburn-theme)
+(tool-belt/require-package 'zenburn-theme)
 (load-theme 'zenburn t)
 
 (set-face-attribute 'default nil :height 160)
