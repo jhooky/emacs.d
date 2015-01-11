@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: <tag>\n...\n</tag>
+# key: tn
+# --
+<${1:tag} class="$2">
+  $0
+</$1>

@@ -1,9 +1,10 @@
-;;; init --- This file bootstraps configuration
+;;; init.el --- This file bootstraps configuration
 
 ;;; Commentary:
 
 ;;; Configuration is divided into multiple files all loaded by init.el
 
+;;; Code:
 (let ((minver "24.4"))
   (when (version<= emacs-version "24.3")
     (error "Your Emacs is too old -- thos config require v%s or higher" minver)))
@@ -41,4 +42,4 @@
 
 (provide 'init)
 
-;;; init ends here
+;;; init.el ends here

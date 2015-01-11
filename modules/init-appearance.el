@@ -20,6 +20,11 @@
                        'fullscreen
                        (when (not (frame-parameter nil 'fullscreen)) 'fullboth)))
 
+(eval-after-load 'diff-mode
+  '(progn
+     (set-face-foreground 'diff-added "green4")
+     (set-face-foreground 'diff-removed "red3")))
+
 (provide 'init-appearance)
 
 ;;; init-appearance.el ends here
