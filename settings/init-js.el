@@ -21,9 +21,12 @@
 ;; Set js-mode hooks.
 
 (add-hook 'js2-mode-hook (lambda () (tern-mode t)))
+(add-hook 'js2-mode-hook 'skewer-mode)
+(add-hook 'js2-mode-hook 'smartparens-mode)
 (add-hook 'js2-mode-hook 'my-js2-mode-hook)
 
-(jhooky/add-auto-mode 'js2-mode "\\.js\\'")
+(jhooky/add-auto-mode 'js2-mode "\\.js\\'" "\\.json\\'")
+
 
 (provide 'init-js)
 

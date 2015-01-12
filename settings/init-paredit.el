@@ -12,10 +12,17 @@
 (with-eval-after-load 'paredit
             (diminish 'paredit-mode " Par"))
 
-(add-hook 'emacs-lisp-mode-hook       'enable-paredit-mode)
-(add-hook 'lisp-mode-hook             'enable-paredit-mode)
+;; (defun my-paredit-nonlisp ()
+;;   "Turn on paredit mode for non-lisps."
+;;   (interactive)
+;;   (set (make-local-variable 'paredit-space-for-delimiter-predicates)
+;;        '((lambda (endp delimiter) nil)))
+;;   (paredit-mode 1))
+
+(add-hook 'emacs-lisp-mode-hook 'enable-paredit-mode)
+(add-hook 'lisp-mode-hook 'enable-paredit-mode)
 (add-hook 'lisp-interaction-mode-hook 'enable-paredit-mode)
-(add-hook 'scheme-mode-hook           'enable-paredit-mode)
+(add-hook 'scheme-mode-hook 'enable-paredit-mode)
 
 (provide 'init-paredit)
 

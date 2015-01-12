@@ -49,6 +49,7 @@
 (jhooky/packages-install
  '(magit
    paredit
+   smartparens
    diminish
    company
    flycheck
@@ -61,7 +62,8 @@
    guide-key
    simple-httpd
    whitespace-cleanup-mode
-   js2-mode))
+   js2-mode
+   skewer-mode))
    
 ;; Add all subdirectories of site-lisp-dir
 (jhooky/add-subfolders-to-load-path *site-lisp-dir*)
@@ -74,6 +76,7 @@
 
 (require 'init-ido)
 (require 'init-paredit)
+(require 'init-smartparens)
 (require 'init-yas)
 (require 'init-company)
 (require 'init-no-scroll)

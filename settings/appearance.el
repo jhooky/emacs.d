@@ -10,7 +10,7 @@
 (jhooky/require-package 'zenburn-theme)
 (load-theme 'zenburn t)
 
-(set-face-attribute 'default nil :height 160)
+(set-face-attribute 'default nil :height 140)
 (set-frame-font "Source Code Pro")
 
 (defun toggle-fullscreen ()
