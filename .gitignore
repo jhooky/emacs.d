@@ -1,11 +1,7 @@
 .DS_Store
 
-plugins/
-backups/
+savefiles/
 elpa/
-places
 
 ac-comphist.dat
 auto-save-list
-ido.last
-.smex-items

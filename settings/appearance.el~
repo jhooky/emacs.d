@@ -1,4 +1,4 @@
-;;;  init-appearance.el - emacs aesthetic customizations
+;;;  appearance.el - emacs aesthetic customizations
 
 ;;; Commentary:
 
@@ -7,7 +7,7 @@
 
 ;;; Code:
 
-(tool-belt/require-package 'zenburn-theme)
+(hooky/require-package 'zenburn-theme)
 (load-theme 'zenburn t)
 
 (set-face-attribute 'default nil :height 160)
@@ -25,6 +25,6 @@
      (set-face-foreground 'diff-added "green4")
      (set-face-foreground 'diff-removed "red3")))
 
-(provide 'init-appearance)
+(provide 'appearance)
 
-;;; init-appearance.el ends here
+;;; appearance.el ends here

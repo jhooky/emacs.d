@@ -6,7 +6,7 @@
 
 ;;; Code:
 
-(tool-belt/require-package 'web-mode)
+(tools/require-package 'web-mode)
 
 (defun my-web-mode-hook ()
   "Hooks for web-mode."
@@ -16,7 +16,7 @@
 
 (add-hook 'web-mode-hook  'my-web-mode-hook)
 
-(tool-belt/add-auto-mode 'web-mode "\\.html?\\'" "\\.mustache\\'")
+(tools/add-auto-mode 'web-mode "\\.html?\\'" "\\.mustache\\'")
 
 
 (provide 'init-web)
