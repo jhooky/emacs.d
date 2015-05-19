@@ -43,14 +43,14 @@ Possition the cursor at its beginning, according to the current mode."
 ;;     (forward-line -1)
 ;;     (indent-according-to-mode))
 
-;; (defun jhooky/open-line-above ()
-;;   "Insert an empty line above the current line.
-;; Position the cursor at it's beginning, according to the current mode."
-;;   (interactive)
-;;   (move-beginning-of-line 1)
-;;   (newline-and-indent)
-;;   (forward-line -1)
-;;   (indent-according-to-mode))
+(defun jhooky/open-line-above ()
+  "Insert an empty line above the current line.
+Position the cursor at it's beginning, according to the current mode."
+  (interactive)
+  (move-beginning-of-line nil)
+  (newline-and-indent)
+  (forward-line -1)
+  (indent-according-to-mode))
 
 (defun jhooky/check-expansion ()
   (save-excursion
@@ -73,6 +73,13 @@ Possition the cursor at its beginning, according to the current mode."
         (if (jhooky/check-expansion)
             (company-complete-common)
           (indent-for-tab-command)))))
+
+(defun jhooky/toggle-fullscreen ()
+  "Toggle full screen."
+  (interactive)
+  (set-frame-parameter nil
+                       'fullscreen
+                       (when (not (frame-parameter nil 'fullscreen)) 'fullboth)))
 
 (provide 'functions)
 

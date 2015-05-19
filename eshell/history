@@ -1,0 +1,10 @@
+l
+ls
+cd snippets/
+ls
+git rmdir html-mode/
+git status
+..
+ls
+ls -al
+exit

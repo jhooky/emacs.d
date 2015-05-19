@@ -7,18 +7,13 @@
 
 ;;; Code:
 
+(jhooky/require-package 'monokai-theme)
 (jhooky/require-package 'zenburn-theme)
-(load-theme 'zenburn t)
+;(load-theme 'zenburn t)
+(load-theme 'monokai t)
 
 (set-face-attribute 'default nil :height 140)
-(set-frame-font "Source Code Pro")
-
-(defun toggle-fullscreen ()
-  "Toggle full screen."
-  (interactive)
-  (set-frame-parameter nil
-                       'fullscreen
-                       (when (not (frame-parameter nil 'fullscreen)) 'fullboth)))
+;(set-frame-font "Source Code Pro")
 
 (eval-after-load 'diff-mode
   '(progn

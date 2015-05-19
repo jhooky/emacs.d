@@ -28,10 +28,10 @@
 (global-set-key [(meta o)] 'jhooky/open-line)
 
 ;; ;; Map M-O to `jhooky/open-line-above'
-;(global-set-key [(meta O)] 'prelude-smart-open-line-above)
+(global-set-key [(meta O)] 'jhooky/open-line-above)
 
 ;; ;; Map tab to `jhooky/tab-indent-or-complete'
-(global-set-key [tab] 'jhooky/tab-indent-or-complete)
+;(global-set-key [tab] 'jhooky/tab-indent-or-complete)
 
 (provide 'key-bindings)
 
